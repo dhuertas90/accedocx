@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block slider %}
+<section>
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <!-- <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    </ol> -->
+    <div class="carousel-inner">
+      <div class="carousel-item drk active">
+        <img class="d-block w-100" src="{% static 'imgweb/fondo.png' %}" alt="tecla accesible dentro de un teclado">
+        <div class="carousel-caption d-none d-md-block">
+          <h1>Accesibilizar Documentos Digitales</h1>
+          <p>Herramienta para accesibilizar documentos con extensión .docx, además puede convertir su archivo PDF a DOCX.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

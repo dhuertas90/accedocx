@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
+{% crispy form form.helper %}
+
+{% block content %}
+<div class="row mb-5 mt-3">
+  <div class="col-md-4 offset-md-4">
+    <h2 class="text-center">Subir documento</h2>
+    <div class="card mt-5">
+      <div class="card-body">
+        <form method="post" enctype="multipart/form-data" class="form">
+          {% csrf_token %}
+          
+          <div class="mb-3">
+            {{ form.titulo|as_crispy_field }}
+          </div>
+          <div class="mb-3">
+            {{ form.autor|as_crispy_field }}
+          </div>
+          <div class="mb-3">
+            {{ form.doc|as_crispy_field }}
+          </div>
+          <a href="{% url 'seccion_subir_documento' %}" class="btn btn-danger">Cancelar</a>
+          <button type="submit" class="btn btn-primary">Subir</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

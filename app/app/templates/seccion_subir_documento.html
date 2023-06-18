@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+{% load static %}
+<h2 class="text-center mt-3">Subir documento</h2>
+<div class="container mt-5">
+    <div class="row align-items-center al">
+        <div class="col d-flex justify-content-center">
+            <div class="card border border-primary mb-3" style="width: 22rem;">
+                <div class="card-body ">
+                    <h5 class="card-title">Suba su documento a nuestra página para poder accesibilizarlo.</h5>
+                    <p class="card-text">El documento debe ser un archivo con extensión .docx y
+                    podrá colocarle un título y un autor.</p>
+                    <a href="{% url 'upload_documento' %}" class="btn btn-primary d-flex justify-content-center">Comenzar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="text-center pt-4 pb-4">
+        <a href="{% url 'documentos' %}" class="btn btn-secondary">Atrás</a>
+    </div>
+</div>
+
+{% endblock %}

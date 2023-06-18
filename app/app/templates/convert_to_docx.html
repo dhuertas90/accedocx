@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+<!-- Plantilla con formualrio para convertir el archivo PDF -->
+
+{% block content %}
+<div class="row mb-5 mt-3">
+  <div class="col-md-4 offset-md-4">
+    <h2 class="text-center">Convertir PDF</h2>
+    <div class="card mt-5">
+      <div class="card-body">
+        <form method="POST" enctype="multipart/form-data" action="/realizar_conversion/">
+          {% csrf_token %}
+          <div class="mb-3">
+            <label for="titulo">Título: </label>
+            <input class="form-control" type="text" name="titulo" id="titulo" required> <br>
+          </div>
+          <div class="mb-3">
+            <label for="autor">Autor:</label>
+            <input class="form-control" type="text" name="autor" id="autor" required> <br>
+          </div>
+          <div class="mb-3">
+            <input class="form-control-file" type="file" name="doc" id="doc" accept="application/pdf" required>
+          </div>
+            <a href="{% url 'seccion_convertir_pdf' %}" class="btn btn-danger">Cancelar</a>
+            <input type="submit" value="Convertir" class="btn btn-primary">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

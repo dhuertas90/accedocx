@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+{% if document %}
+<h1 class="text-center mt-3 mb-3">Accesibilizando</h1>
+<div class="card mb-3">
+    <div class="card-header">
+        <dl class="row mx-5">
+            <dt class="col-sm-2">Título</dt>
+            <dd class="col-sm-9">{{ document.titulo }}</dd>
+        
+            <dt class="col-sm-2">Autor</dt>
+            <dd class="col-sm-9">{{ document.autor }}</dd>
+        </dl>
+    </div>
+</div>
+{% endif %}
+
+<div class="row align-items-center mb-5">
+    <div class="col d-flex justify-content-center">
+        <form method="POST" action="/convertir/">
+            {% csrf_token %}
+            {% with i=0 %}
+            {% for key, value in dict.items %}
+                {% if value.0 == "msg_heading" %}
+                <div class="card container mb-3 pb-3 div-encabezado-{{forloop.counter}}" style="width: 50rem;">
+                    <div class="row">
+                        <div class="card-header text-center">
+                            <h2><em>"{{value.1}}"</em></h2>
+                        </div>
+                        <div class="col-sm-5">
+                            <div class="card-body">
+                                <!-- <h5 class="card-title ms-4">¿Es un título?</h5> -->
+                                <div class="form-check mx-4" style="width: 200px;" >
+                                <fieldset>
+                                    <legend>¿Es un título?</legend>
+                                    <label for="si{{forloop.counter}}" class="form-check-label" >SI</label>
+                                    <input class="form-check-input" type="radio" name="encabezado-select-{{forloop.counter}}" id="si{{forloop.counter}}" value="si">
+                                </fieldset>
+                                </div>
+                                <div class="form-check mx-4" style="width: 200px;">
+                                    <label for="no{{forloop.counter}}" class="form-check-label" >NO</label>
+                                    <input class="form-check-input"  type="radio" name="encabezado-select-{{forloop.counter}}" id="no{{forloop.counter}}" value="no">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-7">
+                            <div class="card-body text-center" id="encabezado-div{{forloop.counter}}">
+                                <h3>Niveles de títulos</h3><hr>
+                                <img src="{% static '/imgweb/titulos.png' %}" alt="niveles de títulos" width="100%" height="50%">
+                            </div>
+                            <div>
+                                <select class="form-select" aria-label="Default select example" name="encabezado-value{{forloop.counter}}" id="niveles{{forloop.counter}}">
+                                    <option value="null" selected disabled>Seleccione título</option>
+                                    <option value="0">Título 0</option>
+                                    <option value="1">Título 1</option>
+                                    <option value="2">Título 2</option>
+                                    <option value="3">Título 3</option>
+                                    <option value="4">Título 4</option>
+                                </select>
+                            </div>
+                            <input type="text" value="{{value.2}}" hidden>
+                        </div>
+                    </div>
+                </div>                
+                {% else %}
+                <div class="card container p-4 mb-3">
+                    <div class="row">
+                        <div class="col">
+                            <img src="{% static value.1 %}" class="card-img-top" style="max-width: fit-content;" alt="imagen {{value.2}} detectada">
+                        </div>
+                        <div class="col">
+                            <div class="card-body">
+                                <label for=""><h3>Ingrese una descripción:</h3></label>
+                                <input type="text" name="imagen-desc{{value.2}}" class="form-control input-sm card-text" placeholder="Escriba descripción" required>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <input type="text" value="{{value.2}}" name="imagen_num{{value.2}}" hidden>
+                {% endif %}
+            {% endfor %}
+            {% endwith %}   
+            <input type="text" name="pk" value="{{pk}}" hidden>
+            <input type="text" name="titulo" value="{{document.titulo}}" hidden>
+            <a href="{% url 'documentos' %}" class="btn btn-danger text-center">Cancel</a>
+            <button type="submit" class="btn btn-primary text-center" id="siguiente">Terminar</button>
+        </form>
+    </div>
+</div>
+
+
+{% endblock %}

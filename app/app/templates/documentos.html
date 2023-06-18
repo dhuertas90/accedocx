@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="row justify-content-center mt-2">
+  <div class="col-lg-10 col-md-12">
+    <div class="card mb-4">
+      <div class="card-body">
+        <h1 class="text-center">Listado de Documentos</h1> <hr>
+        <p class="mt-3">
+          <a href="{% url 'seccion_subir_documento' %}" class="btn btn-primary">Subir documento</a>
+        </p>
+
+        <table class="table my-5">
+          <caption>Listado de documentos existentes en el sistema</caption>
+          <thead>
+            <tr class="text-center">
+              <th>TÍTULO</th>
+              <th>AUTOR</th>
+              <th colspan="4">ACCIONES</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for documento in documentos %}
+              <tr class="text-center">
+                <td>{{ documento.titulo }}</td>
+                <td>{{ documento.autor }}</td>
+                <td>
+                  <form method="post" action="{% url 'delete_documento' documento.pk %}">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-danger btn-sm btnEliminacion">ELIMINAR</button>
+                  </form>
+                </td>
+                <td>
+                  <form action="{% url 'get_documento' documento.pk %}" method="POST">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-success btn-sm">ACCESIBILIZAR</button>
+                  </form>
+                </td>
+                <td>
+                  {% if documento.nombre_accesible %}
+                  <a href="{% static 'docs/' %}{{documento.nombre_accesible}}" class="btn btn-info btn-sm" target="_blank" download>
+                    DESCARGAR DOCX
+                  </a>
+                  {% else %}
+                  <a href="#" class="btn btn-info btn-sm disabled">
+                    DESCARGAR DOCX
+                  </a>
+                  {% endif %}
+                </td>
+                <!-- Implementación futura: descarga en PDF -->
+                <!-- <td>
+                  <form action="{% url 'convertir_a_pdf' documento.pk %}" method="POST">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-dark btn-sm">PDF</button>
+                  </form>
+                </td> -->
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}

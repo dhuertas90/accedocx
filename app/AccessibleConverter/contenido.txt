@@ -1,0 +1,29 @@
+Software Libre
+Es el Software que respeta la libertad de los usuarios y la comunidad. A grandes rasgos, significa que los usuarios tienen la libertad de ejecutar, copiar, distribuir, estudiar, modificar y mejorar el software.
+
+Libertades esenciales
+Un programa es Software Libre si los usuarios tienen las cuatro libertades esenciales:
+rList-La libertad de ejecutar el programa como se desee, con cualquier propósito-List Bullet
+rList-La libertad de estudiar cómo funciona el programa, y cambiarlo para que haga lo que uno o una quiera. El acceso al código fuente es una condición necesaria para ello.-List Bullet
+rList-La libertad de redistribuir copias para ayudar a otras personas.-List Bullet
+rList-La libertad de distribuir copias de sus versiones modificadas a terceros, esto nos permite ofrecer a toda la comunidad la oportunidad de beneficiarse de las modificaciones-List Bullet
+
+Uso y descarga de LibreOffice
+Es un paquete de Software de oficina libre y de código abierto y cuenta con un procesador de texto (Writer), un editor de hojas de cálculo (Calc), un gestor de presentaciones (Impress), un gestor de bases de datos (Base), un editor de gráficos vectoriales (Draw) y un editor de fórmulas matemáticas (Math).
+A continuación, veremos a través de imágenes y sus respectivas explicaciones, cómo descargarlo y algunas de sus funciones. Este proceso cuenta de 7 pasos.
+
+
+Paso 1: Ingreso al Sitio Web.
+Ingresar a libreoffice.org/es, ir a la sección DESCARGA y descargar el LibreOffice presionando sobre la opción Descargar LibreOffice.
+rId8
+
+Paso 2: Descargar el programa.
+Enseguida, nos ofrece descargar el programa en la versión más actual. Debemos seleccionar el sistema operativo de nuestro ordenador entre las opciones existentes y presionar en DESCARGAR. Inicia la descarga.
+rId9
+
+Paso 3: Iniciar el Asistente.
+Completada la descarga del programa, lo siguiente es ubicar nuestro archivo descargado, seleccionarlo y presionar tecla Enter sobre éste para ejecutarlo. Emerge una ventana en nuestra pantalla iniciando el asistente de instalación, como se observa a continuación.
+
+rId10
+
+Esperamos unos segundos a que esté habilitado el botón SIGUIENTE y presionamos sobre él.
