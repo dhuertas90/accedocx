@@ -9,4 +9,9 @@ The reading documents are cut from the original to shorten the process of making
 
 
 **Note**
-There are already uploaded files.
+- There are already uploaded files.
+- RUN SERVER (LOCAL)
+  1- Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
+  2- env/Scripts/Activate
+  3- cd app
+  4- python .\manage.py runserver
