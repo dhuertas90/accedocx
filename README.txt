@@ -15,3 +15,7 @@ The reading documents are cut from the original to shorten the process of making
   2- env/Scripts/Activate
   3- cd app
   4- python .\manage.py runserver
+
+**Notas**
+Dentro del proyecto se encuentran comentarios, y código propio de una primera versión del prototipo. Con muchas mejoras por realizar.
+Para info sobre el alcance de la aplicación sobre un documento pueden revisar el documento Alcante.txt
