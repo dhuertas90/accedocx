@@ -1,0 +1,11 @@
+Utilizando la aplicación y probando con distintos documentos, se obtienen las siguientes consideraciones sobre el documento accesible resultante:
+• En cuanto a las estructuras de texto como párrafos y títulos, no existieron inconvenientes logrando cumplir con los criterios de accesibilidad.
+• En particular, el espaciado de las líneas de textos y párrafos, los interlineados, resultaron expresarse en el documento de manera correcta, respetando los criterios de accesibilidad.
+• Además, los tamaños y estilos sobre los textos fueron resueltos por la herramienta de manera satisfactoria respetando los criterios de accesibilidad.
+• Como la herramienta genera un documento sin formato de color sobre los fondos y contrastes, no existieron inconvenientes en ese aspecto.
+• Sobre los elementos de listas, se pudieron traspasar desde el documento original hacia el resultante.
+• Los hipervínculos fueron rescatados y colocados dentro del documento resultante.
+• Un detalle encontrado en sobre las listas que existen en un documento, es que no es posible aún, con la biblioteca python-docx, diferenciar entre listas ordenadas o no-ordenadas. En este sentido, se llevó a cabo la transformación de todas las listas existentes en el documento origen hacia un formato de lista no-numeradas en el documento resultante.
+• Si bien las imágenes fueron detectadas, la descripción de la imagen se realiza mediante la colocación de un párrafo debajo de la imagen. Incluir un texto alternativo sobre la imagen no es una función que exista aún dentro de la tecnología utilizada python-docx.
+• Sobre los hipervínculos dentro de un párrafo, se lograron rescatar tanto el nombre del link colocado, si es que tiene, y su dirección asociada. Son esta información es detectable, pero al momento de la conversión son colocados luego de finalizar el párrafo donde fueron detectados.
+• Los inconvenientes encontrados fueron sobre componentes especiales que existían dentro del documento como tablas, en este caso, se perdía el formato de manera detallada de las líneas delimitadoras. También el encabezado y pie de página no es abarcado con la herramienta, como resultado de la prueba.
