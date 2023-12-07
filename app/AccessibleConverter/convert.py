@@ -55,28 +55,19 @@ def convert(content, name, author):
                     writeParagraph(document, itemList, style=typeList, indentation=1)
                 elif len(c_line) <= 40 and not any(map(c_line.__contains__, ["http","www.",".com",".org"])):
                     is_header = False
-                    print(f"CONTENIDO formulario: \n{content}.")
                     for elem in content:
-                        print("*"*15)
-                        print(f"Contenido de elem:\n{elem}")
                         if elem[0] == 'header':
-                            print("...Detectado como posible header...")
                             if elem[1] == "no":
-                                print(f"No es header (debería ser NO): {elem[1]}.\nTexto: {c_line}.")
                                 writeParagraph(document, c_line)
                                 content.remove(elem)
-                                print("*"*15)
                             else:
-                                print(f"Es un header (debería ser SI): {elem[1]}.\nTexto: {c_line}.\nNivel será: {elem[2]}.")
                                 is_header=True
                                 h_level = elem[2]
                                 content.remove(elem)
                             break
                     if is_header:
-                        print(f"Encabezado: {c_line}.\nEs header (si): {elem[1]}. Nivel: {h_level}.")
                         # Agregar encabezado
                         document.add_heading(c_line+"\n", level=int(h_level))
-                        print("*"*15)
                 else:
                     writeParagraph(document, c_line)
     url_doc = path_docs_folder + name + '.docx'
