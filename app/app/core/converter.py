@@ -12,6 +12,7 @@ def converterPDF(pdf_file, docx_file):
     cv = Converter(pdf_file)
     cv.convert(docx_file, start=0, end=None)
     cv.close()
+    print("ME EJECUTÉ")
 
 
 def converterDOCX(pdf_file, docx_file):   

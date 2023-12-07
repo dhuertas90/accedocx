@@ -19,3 +19,9 @@ class Documento(models.Model):
 
     def get_author(self):
         return self.autor
+    
+    def get_doc(self):
+        return self.doc
+    
+    def get_nombreAccesible(self):
+        return self.nombre_accesible

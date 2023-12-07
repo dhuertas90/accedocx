@@ -55,6 +55,7 @@ def processing_file(file, image_path):
                     h_rId = link.get("{http://schemas.openxmlformats.org/officeDocument/2006/relationships}id")
                     h_url = doc._part.rels[h_rId]._target
                     text = paragraph.text + "\n" + h_text + ": " + h_url
+                    print(h_text)
             else:
                 text = paragraph.text
             content = text

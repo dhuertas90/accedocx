@@ -140,23 +140,35 @@ def convertir(request):
     if request.method == 'POST':
         items = request.POST.items()
         next(items)
-        for elem in items:
-            if elem[0] == 'pk': pass
-            elif elem[0] == 'titulo': nombre = elem[1]
-            elif elem[0].startswith("encabezado"):
-                if elem[0].startswith("encabezado-select"):
-                    res = elem[1]
+        form_dict = dict(request.POST.items())
+        print(form_dict.items())
+        ant = ''
+        for key, value in form_dict.items():
+            if key.startswith("encabezado"):
+                if key.startswith("encabezado-select"):
+                    #Evaluar la opcion seleccionada: 'encabezado-select-1': 'si'
+                    #value es respuesta del selector: SI O NO
+                    if ant== "encabezado-select" :
+                        # Si el anterior elemento fue un selector, entonces la nueva entrada al contenido es el un NOheader (anterior)
+                        header_entry = ('header','no', '')
+                        contenido.append(header_entry)
+                        print(('header','no', ''))
+                    # Rescato el valor de la respuesta
+                    esHeader = value
+                    ant = "encabezado-select"
                 else:
-                    contenido.append(('header',res, elem[1]))
-                    res = ''
-            elif elem[0].startswith("imagen"):
-                if elem[0].startswith("imagen-desc"):
-                    desc = elem[1]
+                    print(f"Clave: {key}")
+                    #Rescatar el nivel: 'encabezado-value1': '1'
+                    header_entry = ('header',esHeader, value)
+                    contenido.append(header_entry)
+                    print(('header',esHeader, value))
+                    ant = ''
+            if key.startswith("imagen"):
+                if key.startswith("imagen-desc"):
+                    desc = value
                 else:
-                    contenido.append(('image',elem[1], desc))
-                    desc = ''
-            else:
-                pass
+                    contenido.append(('image', value, desc))
+            if key == 'titulo': nombre = value
     else:
         pass
     pk=int(request.POST['pk'])

@@ -1,29 +1,31 @@
-Software Libre
-Es el Software que respeta la libertad de los usuarios y la comunidad. A grandes rasgos, significa que los usuarios tienen la libertad de ejecutar, copiar, distribuir, estudiar, modificar y mejorar el software.
 
-Libertades esenciales
-Un programa es Software Libre si los usuarios tienen las cuatro libertades esenciales:
-rList-La libertad de ejecutar el programa como se desee, con cualquier propósito-List Bullet
-rList-La libertad de estudiar cómo funciona el programa, y cambiarlo para que haga lo que uno o una quiera. El acceso al código fuente es una condición necesaria para ello.-List Bullet
-rList-La libertad de redistribuir copias para ayudar a otras personas.-List Bullet
-rList-La libertad de distribuir copias de sus versiones modificadas a terceros, esto nos permite ofrecer a toda la comunidad la oportunidad de beneficiarse de las modificaciones-List Bullet
+¿Qué es un Archivo?
+En informática, se conoce como archivo o fichero a un conjunto organizado de unidades de información (bits) almacenados en un dispositivo. Se les denomina de esa manera como metáfora a partir de los archivos tradicionales de oficina, escritos en papel, ya que vendrían a ser su equivalente digital. Cada archivo posee una identificación única o nombre, la cual puede ser modificada o asignada a voluntad del usuario o del programador, y una extensión que determina qué tipo de archivo es y qué funciones cumple. Usualmente ambos términos de su nombre están separados por un punto, por ejemplo: cilsa.docx
 
-Uso y descarga de LibreOffice
-Es un paquete de Software de oficina libre y de código abierto y cuenta con un procesador de texto (Writer), un editor de hojas de cálculo (Calc), un gestor de presentaciones (Impress), un gestor de bases de datos (Base), un editor de gráficos vectoriales (Draw) y un editor de fórmulas matemáticas (Math).
-A continuación, veremos a través de imágenes y sus respectivas explicaciones, cómo descargarlo y algunas de sus funciones. Este proceso cuenta de 7 pasos.
+Estructura de un Archivo
+Dentro de los archivos existen paquetes pequeños de datos expresados en bits (la unidad informática más pequeña que existe) y que se ordenan en registros o líneas, siendo individualmente distintos, pero con algún rasgo común. El modo de agrupación de esta información depende de quién haga el archivo, por lo que existen numerosas estructuras de archivo, más simples y más complejas, que están más o menos estandarizadas hoy día. Estas unidades mínimas de operación y organización de un Sistema Operativo que son los archivos, entonces, se pueden crear, eliminar, reubicar, comprimir, renombrar y activar (ejecutar, en lenguaje informático), junto con otras operaciones básicas de organización.
 
+def saludar:
+	print(“hola mundo”)
 
-Paso 1: Ingreso al Sitio Web.
-Ingresar a libreoffice.org/es, ir a la sección DESCARGA y descargar el LibreOffice presionando sobre la opción Descargar LibreOffice.
-rId8
+¿Para qué sirve un Archivo?
+Los archivos pueden tener numerosas funciones. Desde simplemente contener información de manera ordenada, como los archivos de texto, y permitir el acceso a ella por parte de programas determinados, hasta archivos ejecutables que desencadenan cierta secuencia de acciones (y de otros archivos) que tienen como resultado una acción concreta. Desde apagar el computador hasta iniciar un videojuego, todo lo que ocurre en un sistema informático ocurre a través de archivos interconectados ejecutándose por turno en la memoria del computador.
 
-Paso 2: Descargar el programa.
-Enseguida, nos ofrece descargar el programa en la versión más actual. Debemos seleccionar el sistema operativo de nuestro ordenador entre las opciones existentes y presionar en DESCARGAR. Inicia la descarga.
-rId9
+Características generales de un Archivo
+En líneas generales, los archivos de un sistema informático tienen características que se mencionarán a continuación.
+Representables
+Los archivos suelen tener un nombre de máximo 255 caracteres y suelen ser representados en sistemas operativos de interfaz gráfica (como Windows) por un ícono determinado.
+Únicos por directorio
+En una misma carpeta o directorio no pueden existir dos archivos idénticos con el mismo nombre. Cuando ello ocurra alguno de los dos habrá de cambiar levemente su nombre o en todo caso será remplazado uno por otro.
+Modificables
+Excepto aquellos que expresamente hayan sido protegidos contra modificación, como es el caso de los archivos vitales del sistema informático, que no deben sufrir cambios pues éste se desestabilizaría, lo común es que los archivos puedan borrarse, crearse, modificarse, renombrarse a voluntad o necesidad.
+Poseen un tamaño
+De acuerdo a la cantidad de información que un archivo contenga, éste tendrá un tamaño o “peso”, mensurable en Kb, Mb o incluso Gb. Mientras más grande sea el archivo, más capacidad deberá tener el soporte donde se encuentre.
 
-Paso 3: Iniciar el Asistente.
-Completada la descarga del programa, lo siguiente es ubicar nuestro archivo descargado, seleccionarlo y presionar tecla Enter sobre éste para ejecutarlo. Emerge una ventana en nuestra pantalla iniciando el asistente de instalación, como se observa a continuación.
+Formato de Archivo
+La manera en que la información se codifica y ordena dentro de los archivos se conoce como formato, y responde a diversos estándares existentes. Dependiendo de dichos formatos habrá compatibilidades o incompatibilidades a la hora de acceder a dicha información. Por ejemplo, existen los archivos de audio, pero no todos tienen el mismo formato, la información en cada archivo de audio se ha trabajado y se reproduce de una manera particular, cada una de esas maneras será un formato. En definitiva, el formato es la forma que se le ha dado a una información. Por ejemplo: para archivos de audio hay formatos MP3, WAV, entre otros.
 
-rId10
-
-Esperamos unos segundos a que esté habilitado el botón SIGUIENTE y presionamos sobre él.
+Archivo en Informática
+Se comparte la siguiente página web .
+Archivos en Informática: https://concepto.de/archivo-informatico/
+El mismo nos envía hacia un sitio web, el cual contiene una explicación de qué es un archivo informático, para qué sirve y las características del mismo. Además, se mencionan los Formatos de archivos que existen y se muestran ejemplos.
